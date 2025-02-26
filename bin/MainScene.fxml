@@ -8,18 +8,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="BackgroundPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+<AnchorPane fx:id="BackgroundPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="3130.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
    <children>
-      <AnchorPane fx:id="Left_Frame" prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: #b3ce90;">
+      <AnchorPane fx:id="Left_Frame" layoutY="3.0" prefHeight="641.0" prefWidth="500.0" style="-fx-background-color: #b3ce90;">
          <children>
-            <ImageView fx:id="Logo_Text" fitHeight="700.0" fitWidth="511.0" layoutX="-10.0" layoutY="-4.0" pickOnBounds="true">
+            <ImageView fx:id="Logo_Text" fitHeight="641.0" fitWidth="500.0" layoutY="-3.0" pickOnBounds="true">
                <image>
                   <Image url="@../../../../Pictures/Screenshots/Screenshot%202025-02-26%20235413.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="Right_Frame" layoutX="498.0" prefHeight="700.0" prefWidth="510.0" style="-fx-background-color: #3a5f1b;">
+      <AnchorPane fx:id="Right_Frame" layoutX="500.0" layoutY="-4.0" prefHeight="648.0" prefWidth="500.0" style="-fx-background-color: #3a5f1b;">
          <children>
             <Label fx:id="Login_Text" layoutX="185.0" layoutY="154.0" style="-fx-font-family: Poppins;" text="LOGIN" textFill="#b3ce90">
                <font>

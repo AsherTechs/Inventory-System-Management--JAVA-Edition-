@@ -2,6 +2,7 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -17,8 +18,9 @@ public class App extends Application {
     @Override
     public void start(Stage primarystage) {
         try {
+
             Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
-            Scene scene = new Scene(root, 1000, 700); // The MainScene of the GUI
+            Scene scene = new Scene(root, 1000, 643); // The MainScene of the GU
 
             primarystage.setTitle("ALTURA BATA INVENTORY SYSTEM");
             Image icon = new Image("Logo.png");
@@ -30,6 +32,7 @@ public class App extends Application {
 
             primarystage.setScene(scene); // Calling the scene method
             primarystage.show(); // Outputing the overall GUI
+
         } catch (Exception e) {
             e.printStackTrace();
         }
