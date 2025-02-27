@@ -20,10 +20,10 @@ public class App extends Application {
         try {
 
             Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
-            Scene scene = new Scene(root, 1000, 643); // The MainScene of the GU
+            Scene scene = new Scene(root, 1000, 635); // The MainScene of the GU
 
             primarystage.setTitle("ALTURA BATA INVENTORY SYSTEM");
-            Image icon = new Image("Logo.png");
+            Image icon = new Image("Images/Logo.png");
             primarystage.getIcons().add(icon);
             primarystage.setResizable(false);
 
