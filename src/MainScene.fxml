@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -12,8 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane fx:id="BackgroundPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="3130.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+<Pane fx:id="BackgroundPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="3921.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
    <children>
       <BorderPane fx:id="Login_Frame" layoutX="-2.0" layoutY="-8.0" prefHeight="643.0" prefWidth="1000.0">
          <left>
@@ -37,11 +37,22 @@
                   </Label>
                   <TextField fx:id="PH_User" layoutX="120.0" layoutY="253.0" onAction="#User_Login" prefHeight="51.0" prefWidth="286.0" promptText="Username" style="-fx-background-radius: 12;" />
                   <TextField fx:id="PH_Password" layoutX="120.0" layoutY="358.0" onAction="#Pass_Login" prefHeight="51.0" prefWidth="286.0" promptText="Password" style="-fx-background-radius: 12;" />
-                  <Button fx:id="Login_Btn" layoutX="162.0" layoutY="485.0" mnemonicParsing="false" onAction="#Login_Click" prefHeight="57.0" prefWidth="192.0" style="-fx-background-radius: 12; -fx-background-color: #b3ce90;" text="LOGIN" textFill="WHITE">
+                  <Button fx:id="Login_Btn" layoutX="162.0" layoutY="454.0" mnemonicParsing="false" onAction="#Login_Click" prefHeight="57.0" prefWidth="192.0" style="-fx-background-radius: 12; -fx-background-color: #b3ce90;" text="LOGIN" textFill="WHITE">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Button>
+                  <Label fx:id="Dont_Have" layoutX="111.0" layoutY="567.0" text="Don't have an account?" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="Registration_Link" layoutX="324.0" layoutY="563.0" onAction="#Click_Here" style="-fx-background-color: #b3ce90;" text="Click Here!" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="Reset_Link" layoutX="218.0" layoutY="605.0" onAction="#Reset" style="-fx-background-color: #b3ce90;" text="Reset Password" textFill="WHITE" />
                </children>
             </AnchorPane>
          </right>
@@ -50,7 +61,7 @@
          <top>
             <AnchorPane fx:id="Registration_Top" prefHeight="94.0" prefWidth="1000.0" style="-fx-background-color: #3a5f1b;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="Logo" fitHeight="74.0" fitWidth="67.0" layoutX="249.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Logo_Register" fitHeight="74.0" fitWidth="67.0" layoutX="249.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Images/Logo.png" />
                      </image>
@@ -69,26 +80,26 @@
          <left>
             <AnchorPane fx:id="Registration_Bg" prefHeight="506.0" prefWidth="1000.0" style="-fx-background-color: #b3ce90;" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="Enter_User" layoutX="96.0" layoutY="45.0" style="-fx-font-family: Arial Black;" text="Enter Username">
+                  <Label fx:id="Enter_User" layoutX="405.0" layoutY="44.0" style="-fx-font-family: Arial Black;" text="Enter Username">
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="Register_UserField" layoutX="98.0" layoutY="83.0" onAction="#Register_UsernameBox" prefHeight="48.0" prefWidth="762.0" />
-                  <Label fx:id="Enter_Password" layoutX="98.0" layoutY="153.0" style="-fx-font-family: Arial Black;" text="Enter Password">
+                  <TextField fx:id="Register_UserField" layoutX="278.0" layoutY="83.0" onAction="#Register_UsernameBox" prefHeight="48.0" prefWidth="420.0" />
+                  <Label fx:id="Enter_Password" layoutX="396.0" layoutY="159.0" style="-fx-font-family: Arial Black;" text="Enter Password">
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="Register_PassField" layoutX="98.0" layoutY="191.0" onAction="#Register_PasswordBox" prefHeight="48.0" prefWidth="762.0" />
-                  <Label fx:id="Confirm_Password" layoutX="99.0" layoutY="258.0" style="-fx-font-family: Arial Black;" text="Confirm Password">
+                  <TextField fx:id="Register_PassField" layoutX="279.0" layoutY="190.0" onAction="#Register_PasswordBox" prefHeight="48.0" prefWidth="418.0" />
+                  <Label fx:id="Confirm_Password" layoutX="382.0" layoutY="264.0" style="-fx-font-family: Arial Black;" text="Confirm Password">
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="Confirm_PassField" layoutX="99.0" layoutY="296.0" onAction="#Register_ConfirmPasswordBox" prefHeight="48.0" prefWidth="762.0" />
-                  <ComboBox fx:id="Security_Box" layoutX="100.0" layoutY="396.0" onAction="#Question_Box" prefHeight="39.0" prefWidth="253.0" promptText="Select Security Question" />
-                  <Label fx:id="Security_Question" layoutX="99.0" layoutY="359.0" style="-fx-font-family: Arial Black;" text="Security Question">
+                  <TextField fx:id="Confirm_PassField" layoutX="278.0" layoutY="295.0" onAction="#Register_ConfirmPasswordBox" prefHeight="48.0" prefWidth="420.0" />
+                  <ComboBox fx:id="Security_Box" layoutX="131.0" layoutY="396.0" onAction="#Question_Box" prefHeight="39.0" prefWidth="298.0" promptText="Select Security Question" />
+                  <Label fx:id="Security_Question" layoutX="385.0" layoutY="357.0" style="-fx-font-family: Arial Black;" text="Security Question">
                      <font>
                         <Font size="26.0" />
                      </font>
@@ -98,9 +109,70 @@
                         <Font size="22.0" />
                      </font>
                   </Button>
+                  <Label fx:id="Already_Have" layoutX="630.0" layoutY="474.0" text="Already have an account?" textFill="#3a5f1b">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="GoBack_Link" layoutX="854.0" layoutY="470.0" onAction="#GoBack_Btn" style="-fx-background-color: #3a5f1b;" text="Click Here!" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Hyperlink>
+                  <TextField fx:id="Security_Answer1" layoutX="586.0" layoutY="396.0" onAction="#Answer_Box1" prefHeight="39.0" prefWidth="246.0" promptText="Enter Your Security Answer Here" />
                </children>
             </AnchorPane>
          </left>
+      </BorderPane>
+      <BorderPane fx:id="Reset_Frame" layoutX="2607.0" layoutY="-5.0" prefHeight="643.0" prefWidth="1000.0">
+         <top>
+            <AnchorPane fx:id="Forget_Top" prefHeight="94.0" prefWidth="1000.0" style="-fx-background-color: #3a5f1b;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="Logo_Forget" fitHeight="74.0" fitWidth="67.0" layoutX="297.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Logo.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="Forget_Text" layoutX="394.0" layoutY="22.0" text="Reset Password" textFill="#b3ce90">
+                     <font>
+                        <Font name="Arial Black" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane fx:id="Forget_Background" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #b3ce90;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="User_Reset" layoutX="447.0" layoutY="68.0" style="-fx-font-family: Arial Black;" text="Enter Username">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Reset_UserField" layoutX="332.0" layoutY="99.0" onAction="#Reset_Username" prefHeight="48.0" prefWidth="420.0" />
+                  <Label fx:id="Pass_Reset" layoutX="451.0" layoutY="194.0" style="-fx-font-family: Arial Black;" text="Enter Password">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Reset_PassField" layoutX="333.0" layoutY="226.0" onAction="#Reset_Password" prefHeight="48.0" prefWidth="420.0" />
+                  <Label fx:id="Security_Question1" layoutX="439.0" layoutY="314.0" style="-fx-font-family: Arial Black;" text="Security Question">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Security_Answer2" layoutX="418.0" layoutY="353.0" onAction="#Answer_Box2" prefHeight="39.0" prefWidth="246.0" promptText="Enter Your Security Answer Here" />
+                  <Button fx:id="Reset_Btn" layoutX="447.0" layoutY="426.0" mnemonicParsing="false" onAction="#Reset_Click" prefHeight="57.0" prefWidth="192.0" style="-fx-background-radius: 12; -fx-background-color: #3a5f1b;" text="Save Changes" textFill="#fdfffb">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
       </BorderPane>
    </children>
 </Pane>
