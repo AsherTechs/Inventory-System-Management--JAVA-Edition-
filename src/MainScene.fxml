@@ -98,7 +98,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="Confirm_PassField" layoutX="278.0" layoutY="295.0" onAction="#Register_ConfirmPasswordBox" prefHeight="48.0" prefWidth="420.0" />
-                  <ComboBox fx:id="Security_Box" layoutX="131.0" layoutY="396.0" onAction="#Question_Box" prefHeight="39.0" prefWidth="298.0" promptText="Select Security Question" />
+                  <ComboBox fx:id="Security_Box" layoutX="131.0" layoutY="396.0" onAction="#Question_Box" prefHeight="39.0" prefWidth="253.0" promptText="Select Security Question" />
                   <Label fx:id="Security_Question" layoutX="385.0" layoutY="357.0" style="-fx-font-family: Arial Black;" text="Security Question">
                      <font>
                         <Font size="26.0" />
@@ -153,7 +153,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="Reset_UserField" layoutX="332.0" layoutY="99.0" onAction="#Reset_Username" prefHeight="48.0" prefWidth="420.0" />
-                  <Label fx:id="Pass_Reset" layoutX="451.0" layoutY="194.0" style="-fx-font-family: Arial Black;" text="Enter Password">
+                  <Label fx:id="Pass_Reset" layoutX="421.0" layoutY="194.0" style="-fx-font-family: Arial Black;" text="Enter New Password">
                      <font>
                         <Font size="26.0" />
                      </font>
